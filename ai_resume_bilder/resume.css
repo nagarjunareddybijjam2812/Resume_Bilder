@@ -1,0 +1,318 @@
+/* ═══════════════════════════════════════════════════
+   RESUME PAPER STYLES (resume.css)
+   Exactly matches the ATS-friendly sample image:
+   – Times New Roman-style serif for resume body
+   – Dark navy blue section headers with underlines
+   – Name in large bold dark blue
+   – Right-aligned dates, two-column layout
+   – Tight spacing, clean hierarchy
+═══════════════════════════════════════════════════ */
+
+:root {
+  --resume-primary: #1a237e;
+  --resume-font: 'Times New Roman', Times, serif;
+  --resume-font-size: 10.5pt;
+  --resume-bg: #ffffff;
+  --resume-text: #000000;
+  --resume-header-bg: transparent;
+  --resume-header-text: #1a237e;
+  --resume-section-border: 1.5px solid var(--resume-primary);
+  --resume-align: left;
+}
+
+#resume-paper {
+  font-family: var(--resume-font);
+  font-size: var(--resume-font-size);
+  color: var(--resume-text);
+  background: var(--resume-bg);
+  padding: 36pt 42pt 36pt 42pt;
+  line-height: 1.35;
+  transition: all 0.3s;
+}
+
+/* ── HEADER: Name & Contact ── */
+.r-name {
+  text-align: center;
+  font-size: 22pt;
+  font-weight: bold;
+  color: var(--resume-header-text);
+  margin-bottom: 4pt;
+  font-family: var(--resume-font);
+  letter-spacing: 0.3pt;
+  background: var(--resume-header-bg);
+}
+
+.r-contact {
+  text-align: center;
+  font-size: 9.5pt;
+  color: var(--resume-text);
+  margin-bottom: 10pt;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+
+.r-contact-item {
+  display: inline;
+}
+
+.r-contact-sep {
+  display: inline;
+  margin: 0 5pt;
+  color: var(--resume-text);
+  opacity: 0.7;
+}
+
+.r-contact a {
+  color: var(--resume-primary);
+  text-decoration: none;
+}
+.r-contact a:hover { text-decoration: underline; }
+
+/* ── SECTION HEADER ── */
+.r-section {
+  margin-top: 10pt;
+  margin-bottom: 5pt;
+}
+
+.r-section-title {
+  font-size: 11pt;
+  font-weight: bold;
+  color: var(--resume-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.5pt;
+  border-bottom: var(--resume-section-border);
+  padding-bottom: 2pt;
+  margin-bottom: 6pt;
+  font-family: var(--resume-font);
+  text-align: var(--resume-align);
+}
+
+/* ── SUMMARY ── */
+.r-summary {
+  font-size: 10pt;
+  text-align: justify;
+  line-height: 1.4;
+}
+
+/* ── SKILLS ── */
+.r-skills-list {
+  margin: 0;
+  padding: 0;
+  list-style: disc;
+  padding-left: 18pt;
+}
+.r-skills-list li {
+  margin-bottom: 2pt;
+  font-size: 10pt;
+  line-height: 1.4;
+}
+.r-skills-list li strong {
+  font-weight: bold;
+}
+
+/* ── EXPERIENCE / PROJECT ITEM ── */
+.r-item {
+  margin-bottom: 8pt;
+}
+
+.r-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.r-item-title {
+  font-size: 10.5pt;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+  flex: 1;
+}
+
+.r-item-title em {
+  font-style: italic;
+  font-weight: normal;
+}
+
+.r-item-date {
+  font-size: 10pt;
+  color: #000;
+  white-space: nowrap;
+  margin-left: 10pt;
+  flex-shrink: 0;
+}
+
+.r-item-sub {
+  font-size: 10pt;
+  color: #000;
+  margin-top: 0;
+  font-style: normal;
+}
+
+.r-item-bullets {
+  margin: 2pt 0 0 0;
+  padding-left: 18pt;
+  list-style: disc;
+}
+.r-item-bullets li {
+  font-size: 10pt;
+  margin-bottom: 1.5pt;
+  text-align: justify;
+  line-height: 1.4;
+}
+.r-item-bullets li strong {
+  font-weight: bold;
+}
+
+/* ── ACHIEVEMENTS ── */
+.r-ach-list {
+  margin: 0;
+  padding-left: 18pt;
+  list-style: disc;
+}
+.r-ach-list li {
+  font-size: 10pt;
+  margin-bottom: 2pt;
+  line-height: 1.4;
+  text-align: justify;
+}
+
+/* ── CERTIFICATIONS ── */
+.r-cert-list {
+  margin: 0;
+  padding-left: 18pt;
+  list-style: disc;
+}
+.r-cert-list li {
+  font-size: 10pt;
+  margin-bottom: 2pt;
+  line-height: 1.4;
+}
+
+/* ── EDUCATION ── */
+.r-edu-item {
+  margin-bottom: 6pt;
+}
+.r-edu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.r-edu-degree {
+  font-size: 10.5pt;
+  font-weight: bold;
+}
+.r-edu-date {
+  font-size: 10pt;
+  white-space: nowrap;
+  margin-left: 10pt;
+}
+.r-edu-school {
+  font-size: 10pt;
+  display: flex;
+  justify-content: space-between;
+}
+.r-edu-cgpa {
+  font-size: 10pt;
+  font-weight: bold;
+}
+
+/* ── EMPTY STATE ── */
+.r-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60pt 0;
+  color: #94a3b8;
+  text-align: center;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+.r-empty svg { opacity: .3; margin-bottom: 16px; }
+.r-empty h3 { font-size: 16px; font-weight: 600; color: #64748b; margin-bottom: 6px; }
+.r-empty p  { font-size: 13px; max-width: 280px; }
+
+/* ═══════════════════════════════════════════════════
+   10 TEMPLATE VARIATIONS
+═══════════════════════════════════════════════════ */
+
+/* 1. tpl-classic (Default) - Serif, centered header, blue accents */
+.tpl-classic {
+  --resume-font: 'Times New Roman', Times, serif;
+}
+
+/* 2. tpl-modern - Sans-serif, cleaner lines */
+.tpl-modern {
+  --resume-font: 'Inter', system-ui, sans-serif;
+  --resume-font-size: 10pt;
+}
+.tpl-modern .r-name { font-weight: 800; letter-spacing: -0.5px; }
+.tpl-modern .r-section-title { border-bottom-width: 2px; }
+
+/* 3. tpl-executive - Serif, dark elegant header, strong hierarchy */
+.tpl-executive {
+  --resume-font: 'Georgia', serif;
+  --resume-font-size: 10pt;
+}
+.tpl-executive .r-name { border-bottom: 1px solid #ddd; padding-bottom: 10pt; margin-bottom: 10pt; }
+
+/* 4. tpl-creative - Sans-serif, vibrant borders */
+.tpl-creative {
+  --resume-font: 'Inter', system-ui, sans-serif;
+  --resume-font-size: 9.5pt;
+  padding-left: 52pt !important;
+  border-left: 10pt solid var(--resume-primary);
+}
+.tpl-creative .r-name { text-align: left; font-weight: 800; }
+.tpl-creative .r-contact { justify-content: flex-start; }
+
+/* 5. tpl-twocol - Simulate a two-column feel with indentation */
+.tpl-twocol {
+  --resume-font: 'Arial', sans-serif;
+  --resume-font-size: 9.5pt;
+}
+.tpl-twocol .r-section { margin-left: 120pt; position: relative; }
+.tpl-twocol .r-section-title { position: absolute; left: -120pt; top: 0; width: 100pt; border: none; text-align: right; font-size: 10pt; }
+
+/* 6. tpl-elegant - Centered headers, serif */
+.tpl-elegant {
+  --resume-font: 'Palatino', 'Book Antiqua', serif;
+}
+.tpl-elegant .r-section-title { text-align: center; border-bottom: none; }
+.tpl-elegant .r-section-title::after { content: ''; display: block; width: 40px; height: 2px; background: var(--resume-primary); margin: 4px auto 0; }
+
+/* 7. tpl-tech - Monospaced feel, brackets */
+.tpl-tech {
+  --resume-font: 'Menlo', 'Consolas', monospace;
+  --resume-font-size: 8.5pt;
+}
+.tpl-tech .r-section-title::before { content: 'const '; color: #888; text-transform: lowercase; }
+.tpl-tech .r-section-title::after { content: ' = {'; color: #888; text-transform: lowercase; }
+.tpl-tech .r-section { border-left: 1px dashed #ccc; padding-left: 10pt; margin-left: 5pt; border-bottom: none; }
+.tpl-tech .r-section-title { border-bottom: none; }
+
+/* 8. tpl-bold - Blocky colored headers */
+.tpl-bold {
+  --resume-font: 'Inter', sans-serif;
+  --resume-font-size: 10pt;
+}
+.tpl-bold .r-section-title { background: var(--resume-primary); color: white; padding: 4pt 8pt; display: inline-block; border-bottom: none; border-radius: 2px; }
+
+/* 9. tpl-compact - Dense data fit */
+.tpl-compact {
+  --resume-font: 'Arial', sans-serif;
+  --resume-font-size: 9pt;
+  line-height: 1.2 !important;
+  padding: 24pt !important;
+}
+.tpl-compact .r-section { margin-top: 6pt; margin-bottom: 2pt; }
+.tpl-compact .r-section-title { margin-bottom: 2pt; padding-bottom: 0; border-bottom-width: 1px; }
+
+/* 10. tpl-accent - Accented text items */
+.tpl-accent {
+  --resume-font: 'Georgia', serif;
+}
+.tpl-accent .r-item-title { color: var(--resume-primary); }
+.tpl-accent .r-section-title { border-bottom: 1px dotted var(--resume-primary); border-top: 1px dotted var(--resume-primary); padding: 4pt 0; }
