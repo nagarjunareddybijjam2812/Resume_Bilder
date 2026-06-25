@@ -1,0 +1,6 @@
+{
+  "name": "AI Resume Builder",
+  "description": "Premium AI Resume Builder with real-time live preview, ATS tracking, Cover Letter editor, LinkedIn optimizer, and Interview Prep modules.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
